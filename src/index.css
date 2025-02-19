@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@theme {
+  --default-font-family: 'Geologica';
+
+  --color-bg: #070707;
+  --color-text: #e0e0e0;
+  --color-primary: #619af9;
+  --color-secondary: #121212;
+}
+
+body {
+  @apply bg-bg text-text;
+}
