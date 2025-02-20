@@ -28,7 +28,7 @@ export function WeatherAdditionalInfoWidget() {
             icon={Thermometer}
           />
           <InfoCard
-            title='humidity'
+            title='visibility'
             value={`${Math.round(weatherCity?.visibility / 1000)}km`}
             icon={Eye}
           />
