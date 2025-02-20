@@ -19,3 +19,11 @@ body {
 input {
   outline: none;
 }
+
+h2 {
+  font-size: clamp(2rem, 1.865rem + 0.68vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.365rem + 0.68vw, 2rem);
+}

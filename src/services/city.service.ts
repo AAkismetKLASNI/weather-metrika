@@ -11,8 +11,12 @@ class CityService {
     );
   }
 
-  async getByData(lat: number, lon: number) {
-    return await openWeather.getThreeHourForecastByGeoCoordinates(lat, lon);
+  getWeatherByGeo(lat: number, lon: number) {
+    return openWeather.getCurrentWeatherByGeoCoordinates(lat, lon);
+  }
+
+  getForecastByGet(lat: number, lon: number) {
+    return openWeather.getThreeHourForecastByGeoCoordinates(lat, lon);
   }
 }
 

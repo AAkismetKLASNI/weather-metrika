@@ -3,11 +3,11 @@ import { Logo } from './components/logo';
 import { useDebounce } from '../../../hooks/use.debounce';
 import { useGetCitiesList } from '../../../hooks/use.get.cities.list';
 import { Badge } from '../../ui/badge';
-import { useGetCity } from '../../../hooks/use.get.city';
+import { useGetWeatherCity } from '../../../hooks/use.get.weather.city';
 
 export function Header() {
   const { cities, setIsSearch, setSearchTerm, searchTerm } = useGetCitiesList();
-  const { setSearchCity } = useGetCity();
+  const { setSearchCity } = useGetWeatherCity();
 
   const debounce = useDebounce(() => {
     setIsSearch(true);
@@ -20,7 +20,7 @@ export function Header() {
   };
 
   return (
-    <header className='p-4 mt-4 grid grid-cols-2 gap-6 w-full'>
+    <header className='mt-4 grid grid-cols-[_1fr_10fr] gap-6 w-full relative'>
       <Logo />
       <div className='space-y-2 flex items-center py-4 px-10 bg-secondary rounded-full'>
         <Field
@@ -32,7 +32,7 @@ export function Header() {
       </div>
 
       {!!cities?.length && (
-        <div className='row-start-2 col-start-2 flex gap-2 flex-wrap'>
+        <div className='row-start-2 col-start-2 flex gap-2 flex-wrap absolute top-[calc(100%+1rem)]'>
           {cities.map((city, index) => (
             <Badge
               onClick={() => setSearchCity(city)}
