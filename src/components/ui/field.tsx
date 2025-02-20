@@ -9,6 +9,6 @@ export function Field(props: Props) {
     <input
       className={`w-full ${props.extra}`}
       {...props}
-    ></input>
+    />
   );
 }

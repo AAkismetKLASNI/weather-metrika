@@ -3,9 +3,11 @@ import { Logo } from './components/logo';
 import { useDebounce } from '../../../hooks/use.debounce';
 import { useGetCitiesList } from '../../../hooks/use.get.cities.list';
 import { Badge } from '../../ui/badge';
+import { useGetCity } from '../../../hooks/use.get.city';
 
 export function Header() {
   const { cities, setIsSearch, setSearchTerm, searchTerm } = useGetCitiesList();
+  const { setSearchCity } = useGetCity();
 
   const debounce = useDebounce(() => {
     setIsSearch(true);
@@ -31,9 +33,12 @@ export function Header() {
 
       {!!cities?.length && (
         <div className='row-start-2 col-start-2 flex gap-2 flex-wrap'>
-          {cities.map(({ name, country }, index) => (
-            <Badge key={index}>
-              {name} - {country}
+          {cities.map((city, index) => (
+            <Badge
+              onClick={() => setSearchCity(city)}
+              key={index}
+            >
+              {city.name} - {city.country}
             </Badge>
           ))}
         </div>

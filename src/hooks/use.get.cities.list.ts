@@ -18,6 +18,7 @@ export function useGetCitiesList() {
 
   useEffect(() => {
     setCities(data?.data);
+    console.log('cities', data?.data);
     setIsSearch(false);
   }, [data]);
 
