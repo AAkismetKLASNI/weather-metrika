@@ -8,4 +8,4 @@ export const WEATHER_ICON = {
   Clear: Sun,
   Snow: CloudSnow,
   Rain: CloudRain,
-};
+} as const;

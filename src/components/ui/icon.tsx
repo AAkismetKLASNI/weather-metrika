@@ -7,6 +7,8 @@ interface Props {
 }
 
 export function Icon({ Icon, size, extra }: Props) {
+  if (!Icon) return;
+
   return (
     <Icon
       className={extra}

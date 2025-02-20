@@ -3,19 +3,18 @@ import { Logo } from './components/logo';
 import { useDebounce } from '../../../hooks/use.debounce';
 import { useGetCitiesList } from '../../../hooks/use.get.cities.list';
 import { Badge } from '../../ui/badge';
-import { useGetWeatherCity } from '../../../hooks/use.get.weather.city';
+import { useSetAtom } from 'jotai';
+import { searchCityAtom } from '../../../store/search.city.atom';
 
 export function Header() {
   const { cities, setIsSearch, setSearchTerm, searchTerm } = useGetCitiesList();
-  const { setSearchCity } = useGetWeatherCity();
 
-  const debounce = useDebounce(() => {
-    setIsSearch(true);
-  }, 400);
+  const setSearchCity = useSetAtom(searchCityAtom);
+
+  const debounce = useDebounce(() => setIsSearch(true), 400);
 
   const handleOnChange = (e) => {
     setSearchTerm(e.target.value);
-
     debounce();
   };
 
