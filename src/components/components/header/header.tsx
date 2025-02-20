@@ -19,7 +19,7 @@ export function Header() {
   };
 
   return (
-    <header className='mt-4 grid grid-cols-[_1fr_10fr] gap-6 w-full relative'>
+    <header className='mt-6 grid grid-cols-[_1fr_10fr] gap-6 w-full relative'>
       <Logo />
       <div className='space-y-2 flex items-center py-4 px-10 bg-secondary rounded-full'>
         <Field
