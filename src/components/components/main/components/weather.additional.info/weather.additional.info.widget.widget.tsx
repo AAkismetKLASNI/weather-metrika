@@ -11,7 +11,7 @@ export function WeatherAdditionalInfoWidget() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className='p-4 bg-secondary rounded-2xl grid items-center grid-cols-2'>
+        <div className='p-4 bg-secondary rounded-2xl grid items-center grid-cols-2 row-span-1'>
           <InfoCard
             title='humidity'
             value={`${weatherCity?.main.humidity}%`}

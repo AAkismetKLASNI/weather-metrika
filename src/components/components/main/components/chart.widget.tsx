@@ -27,10 +27,11 @@ export function ChartWidget() {
   }));
 
   return (
-    <div className='flex gap-2 p-4 bg-secondary rounded-2xl col-span-2 row-span-3'>
+    <div className='flex gap-2 p-4 bg-secondary rounded-2xl col-span-2 row-span-2'>
       <div className='flex flex-col gap-4'>
-        {chartType.map(({ icon, type }) => (
+        {chartType.map(({ icon, type }, index) => (
           <Icon
+            key={index}
             onClick={() => setSelectedType(type)}
             Icon={icon}
             extra={`${

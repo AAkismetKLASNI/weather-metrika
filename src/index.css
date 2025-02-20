@@ -6,6 +6,7 @@
   --color-bg: #070707;
   --color-text: #e0e0e0;
   --color-primary: #619af9;
+  --color-accent: #ab540f;
   --color-secondary: #121212;
 
   --drop-shadow-primary: 0 0 0.2rem #619af9;
@@ -20,10 +21,19 @@ input {
   outline: none;
 }
 
+button {
+  @apply transition-opacity;
+  cursor: pointer;
+}
+
 h2 {
   font-size: clamp(2rem, 1.865rem + 0.68vw, 2.5rem);
 }
 
 h3 {
   font-size: clamp(1.5rem, 1.365rem + 0.68vw, 2rem);
+}
+
+h4 {
+  @apply text-primary;
 }

@@ -10,7 +10,7 @@ interface Props {
 export function InfoCard({ title, icon, value }: Props) {
   return (
     <div className='space-y-1'>
-      <span>{title}</span>
+      <h4>{title}</h4>
       <div className='flex items-center gap-2'>
         <Icon
           Icon={icon}

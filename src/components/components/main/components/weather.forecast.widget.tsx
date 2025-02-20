@@ -12,13 +12,13 @@ export function WeatherForecastWidget() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className='p-4 bg-secondary rounded-2xl grid grid-cols-5 col-span-2 items-center'>
+        <div className='p-4 bg-secondary rounded-2xl grid grid-cols-5 col-span-2 items-center row-span-1'>
           {fiveDayForecast?.map((forecast) => (
             <div
               key={forecast.dt_txt}
               className='justify-self-center text-center space-y-4'
             >
-              <div>{DAYS[new Date(forecast.dt_txt).getDay()]}</div>
+              <h4>{DAYS[new Date(forecast.dt_txt).getDay()]}</h4>
               <Icon
                 extra='mx-auto'
                 Icon={WEATHER_ICON[forecast.weather[0].main]}

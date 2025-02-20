@@ -7,7 +7,6 @@ export function useGetCitiesList() {
   const [isSearch, setIsSearch] = useState<boolean>(false);
   const limit = '5';
 
-  // fix: зафиксить все запросы в параметрами
   const { data } = useQuery({
     queryKey: ['cities-list'],
     queryFn: () => cityService.getCities(searchTerm, limit),

@@ -2,10 +2,10 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { cityService } from '../../../../services/city.service';
 import { useEffect } from 'react';
 import { useAtomValue } from 'jotai';
-import { searchCityAtom } from '../../../../store/search.city.atom';
+import { geoLocationAtom } from '../../../../store/geo.location';
 
 export function useGetForecastWeather() {
-  const searchCity = useAtomValue(searchCityAtom);
+  const geoLocation = useAtomValue(geoLocationAtom);
 
   const uniqieForecastDays: number[] = [];
 
@@ -18,7 +18,7 @@ export function useGetForecastWeather() {
   } = useQuery({
     queryKey: ['forecast-weather'],
     queryFn: async () => {
-      const data = await cityService.getForecastByGet(searchCity.lat, searchCity.lon);
+      const data = await cityService.getForecastByGet(geoLocation.lat, geoLocation.lon);
 
       return data?.list.filter((forecast) => {
         const forecastDate = new Date(forecast.dt_txt).getDay();
@@ -29,15 +29,15 @@ export function useGetForecastWeather() {
         }
       });
     },
-    enabled: !!searchCity,
+    enabled: !!geoLocation,
     refetchOnMount: false,
   });
 
   useEffect(() => {
-    if (searchCity) {
+    if (geoLocation) {
       queryClient.refetchQueries({ queryKey: ['forecast-weather'] });
     }
-  }, [queryClient, searchCity]);
+  }, [queryClient, geoLocation]);
 
   return { fiveDayForecast, isLoading, isRefetching };
 }
