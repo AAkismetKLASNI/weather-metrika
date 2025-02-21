@@ -18,7 +18,7 @@ export function Header() {
   };
 
   return (
-    <header className='mt-6 grid grid-cols-[_1fr_10fr_0.6fr] gap-6 w-full relative'>
+    <header className='mt-6 grid grid-cols-[_1fr_3fr_0.6fr] lg:grid-cols-[_1fr_8fr_0.6fr] gap-3 lg:gap-6 w-full relative'>
       <Logo />
 
       <div className='space-y-2 flex items-center py-4 px-10 bg-secondary rounded-full'>

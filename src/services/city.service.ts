@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import { ICity } from '../types/geo.location.types';
+import type { ICity } from '../types/geo.location.types';
 import { openWeather } from '../api/open.weather';
 
 class CityService {

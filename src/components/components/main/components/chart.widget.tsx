@@ -3,7 +3,7 @@ import { DAYS } from '../../../../config/days.config';
 import { Icon } from '../../../ui/icon';
 import { Droplet, Gauge, Thermometer, Wind } from 'lucide-react';
 import { useState } from 'react';
-import { IChartData, IChartType } from '../../../../types/chart.types';
+import type { IChartData, IChartType } from '../../../../types/chart.types';
 import { Loader } from '../../../ui/loader';
 import { useGetWeatherAndForecast } from '../hooks/use.get.weather.and.forecast';
 
@@ -32,7 +32,7 @@ export function ChartWidget() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className='flex gap-2 p-4 bg-secondary rounded-2xl col-span-2 row-span-2'>
+        <div className='flex gap-2 p-4 bg-secondary rounded-2xl col-span-1 lg:col-span-2 xl:row-span-2'>
           <div className='flex flex-col gap-4'>
             {chartType.map(({ icon, type }, index) => (
               <Icon

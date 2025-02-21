@@ -1,7 +1,7 @@
 import { useSetAtom } from 'jotai';
 import { geoLocationAtom } from '../../../../store/geo.location';
 import { useEffect } from 'react';
-import { IGeoLocation } from '../../../../types/geo.location.types';
+import type { IGeoLocation } from '../../../../types/geo.location.types';
 
 export function useGeoHandlers() {
   const setGeoLocation = useSetAtom(geoLocationAtom);
