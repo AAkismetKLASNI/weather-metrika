@@ -7,9 +7,12 @@ export function useGeoHandlers() {
   const setGeoLocation = useSetAtom(geoLocationAtom);
 
   useEffect(() => {
-    const { lat, lon } = JSON.parse(localStorage.getItem('geo') || '') as IGeoLocation;
+    const data = localStorage.getItem('geo');
 
-    setGeoLocation({ lat, lon });
+    if (data) {
+      const { lat, lon } = JSON.parse(data) as IGeoLocation;
+      setGeoLocation({ lat, lon });
+    }
   }, [setGeoLocation]);
 
   const getGeoCurrentGeo = () => {
