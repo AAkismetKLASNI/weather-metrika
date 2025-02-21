@@ -12,12 +12,10 @@ class CityService {
   }
 
   getWeatherByGeo(lat: number, lon: number) {
-    console.log('send');
     return openWeather.getCurrentWeatherByGeoCoordinates(lat, lon);
   }
 
   async getForecastByGet(lat: number, lon: number) {
-    console.log('send 2');
     return await openWeather.getThreeHourForecastByGeoCoordinates(lat, lon);
   }
 }
