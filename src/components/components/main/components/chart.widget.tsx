@@ -1,11 +1,11 @@
 import { ResponsiveContainer, LineChart, Line, Tooltip, XAxis } from 'recharts';
-import { useGetForecastWeather } from '../hooks/use.forecast.weather';
 import { DAYS } from '../../../../config/days.config';
 import { Icon } from '../../../ui/icon';
 import { Droplet, Gauge, Thermometer, Wind } from 'lucide-react';
 import { useState } from 'react';
 import { IChartData, IChartType } from '../../../../types/chart.types';
 import { Loader } from '../../../ui/loader';
+import { useGetWeatherAndForecast } from '../hooks/use.get.weather.and.forecast';
 
 const chartType: IChartType[] = [
   { icon: Thermometer, type: 'temp' },
@@ -17,7 +17,7 @@ const chartType: IChartType[] = [
 export function ChartWidget() {
   const [selectedType, setSelectedType] = useState<keyof Omit<IChartData, 'day'>>('temp');
 
-  const { fiveDayForecast, isLoading } = useGetForecastWeather();
+  const { fiveDayForecast, isLoading } = useGetWeatherAndForecast();
 
   const chartData = fiveDayForecast?.map((forecast) => ({
     day: DAYS[new Date(forecast.dt_txt).getDay()],

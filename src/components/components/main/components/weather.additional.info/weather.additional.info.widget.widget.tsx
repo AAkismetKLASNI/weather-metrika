@@ -1,10 +1,10 @@
-import { useGetWeatherCity } from '../../hooks/use.get.weather.city';
 import { Loader } from '../../../../ui/loader';
 import { Droplet, Eye, Thermometer, Wind } from 'lucide-react';
 import { InfoCard } from './info.card';
+import { useGetWeatherAndForecast } from '../../hooks/use.get.weather.and.forecast';
 
 export function WeatherAdditionalInfoWidget() {
-  const { weatherCity, isLoading } = useGetWeatherCity();
+  const { weatherCity, isLoading } = useGetWeatherAndForecast();
 
   return (
     <>

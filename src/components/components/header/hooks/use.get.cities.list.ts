@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { cityService } from '../services/city.service';
+import { cityService } from '../../../../services/city.service';
 import { useEffect, useState } from 'react';
 
 export function useGetCitiesList() {

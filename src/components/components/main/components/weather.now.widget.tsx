@@ -1,10 +1,10 @@
 import { WEATHER_ICON } from '../../../../config/weather.config';
-import { useGetWeatherCity } from '../hooks/use.get.weather.city';
 import { Icon } from '../../../ui/icon';
 import { Loader } from '../../../ui/loader';
+import { useGetWeatherAndForecast } from '../hooks/use.get.weather.and.forecast';
 
 export function WeatherNowWidget() {
-  const { weatherCity, isLoading } = useGetWeatherCity();
+  const { weatherCity, isLoading } = useGetWeatherAndForecast();
 
   const weather = weatherCity?.weather[0]?.main;
 

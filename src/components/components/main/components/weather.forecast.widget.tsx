@@ -1,11 +1,11 @@
-import { useGetForecastWeather } from '../hooks/use.forecast.weather';
 import { Loader } from '../../../ui/loader';
 import { DAYS } from '../../../../config/days.config';
 import { Icon } from '../../../ui/icon';
 import { WEATHER_ICON } from '../../../../config/weather.config';
+import { useGetWeatherAndForecast } from '../hooks/use.get.weather.and.forecast';
 
 export function WeatherForecastWidget() {
-  const { fiveDayForecast, isLoading } = useGetForecastWeather();
+  const { fiveDayForecast, isLoading } = useGetWeatherAndForecast();
 
   return (
     <>

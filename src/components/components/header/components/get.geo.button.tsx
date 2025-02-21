@@ -1,9 +1,9 @@
 import { MapPinHouseIcon } from 'lucide-react';
 import { Icon } from '../../../ui/icon';
-import { useGetCurrentGeo } from '../../../../hooks/use.get.current.geo';
+import { useGeoHandlers } from '../hooks/use.geo.handlers';
 
 export function GetGeoButton() {
-  const { getGeoCurrentGeo } = useGetCurrentGeo();
+  const { getGeoCurrentGeo } = useGeoHandlers();
 
   return (
     <button
