@@ -4,24 +4,30 @@ import { WeatherNowWidget } from './components/weather.now.widget';
 import { WeatherAdditionalInfoWidget } from './components/weather.additional.info/weather.additional.info.widget.widget';
 import { ChartWidget } from './components/chart.widget';
 import { geoLocationAtom } from '../../../store/geo.location';
-import { EmojiWidget } from './components/emoji.widget';
+import { Icon } from '../../ui/icon';
+import { LocateOff } from 'lucide-react';
 
 export function Main() {
   const geoLocation = useAtomValue(geoLocationAtom);
 
   return (
-    <main className='grid grid-cols-4 grid-rows-2 gap-16'>
+    <>
       {geoLocation ? (
-        <>
+        <main className='grid grid-cols-4 grid-rows-2 gap-16'>
           <WeatherNowWidget />
           <WeatherForecastWidget />
           <WeatherAdditionalInfoWidget />
           <ChartWidget />
-          <EmojiWidget />
-        </>
+        </main>
       ) : (
-        <h1>No metrika</h1>
+        <main className='flex flex-col gap-4 items-center text-[#222]'>
+          <Icon
+            Icon={LocateOff}
+            size='90'
+          />
+          <h3 className='font-bold'>No metrika</h3>
+        </main>
       )}
-    </main>
+    </>
   );
 }

@@ -5,7 +5,7 @@ import { Icon } from '../../../ui/icon';
 import { WEATHER_ICON } from '../../../../config/weather.config';
 
 export function WeatherForecastWidget() {
-  const { fiveDayForecast, isLoading, isRefetching } = useGetForecastWeather();
+  const { fiveDayForecast, isLoading } = useGetForecastWeather();
 
   return (
     <>

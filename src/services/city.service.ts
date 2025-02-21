@@ -15,8 +15,8 @@ class CityService {
     return openWeather.getCurrentWeatherByGeoCoordinates(lat, lon);
   }
 
-  getForecastByGet(lat: number, lon: number) {
-    return openWeather.getThreeHourForecastByGeoCoordinates(lat, lon);
+  async getForecastByGet(lat: number, lon: number) {
+    return await openWeather.getThreeHourForecastByGeoCoordinates(lat, lon);
   }
 }
 

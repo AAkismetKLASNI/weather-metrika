@@ -13,22 +13,22 @@ export function WeatherAdditionalInfoWidget() {
       ) : (
         <div className='p-4 bg-secondary rounded-2xl grid items-center grid-cols-2 row-span-1'>
           <InfoCard
-            title='humidity'
+            title='Humidity'
             value={`${weatherCity?.main.humidity}%`}
             icon={Droplet}
           />
           <InfoCard
-            title='wind speed'
+            title='Wind speed'
             value={`${weatherCity?.wind.speed.toFixed()}m`}
             icon={Wind}
           />
           <InfoCard
-            title='feels like'
+            title='Feels like'
             value={`${weatherCity?.main.feels_like.toFixed()}c`}
             icon={Thermometer}
           />
           <InfoCard
-            title='visibility'
+            title='Visibility'
             value={`${Math.round(weatherCity?.visibility / 1000)}km`}
             icon={Eye}
           />

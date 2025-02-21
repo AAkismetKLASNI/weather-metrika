@@ -30,7 +30,6 @@ export function useGetForecastWeather() {
       });
     },
     enabled: !!geoLocation,
-    refetchOnMount: false,
   });
 
   useEffect(() => {

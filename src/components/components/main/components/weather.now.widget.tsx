@@ -16,7 +16,6 @@ export function WeatherNowWidget() {
         <div className='p-4 bg-secondary rounded-2xl grid text-center grid-rows-2 gap-4 row-span-1'>
           <div className='space-y-2 justify-self-center'>
             <h4>Now</h4>
-
             <h2>{weatherCity?.main.temp.toFixed(0)}&deg;c</h2>
           </div>
           <div className='space-y-2 justify-self-center'>
