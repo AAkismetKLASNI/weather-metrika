@@ -9,3 +9,5 @@ export const WEATHER_ICON = {
   Snow: CloudSnow,
   Rain: CloudRain,
 } as const;
+
+export type WeatherKey = keyof typeof WEATHER_ICON;

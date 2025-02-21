@@ -16,6 +16,8 @@ export function useGetWeatherAndForecast() {
       {
         queryKey: ['forecast-weather'],
         queryFn: async () => {
+          if (!geoLocation) return;
+
           const data = await cityService.getForecastByGet(
             geoLocation.lat,
             geoLocation.lon
@@ -37,8 +39,11 @@ export function useGetWeatherAndForecast() {
       },
       {
         queryKey: ['weather-city'],
-        queryFn: async () =>
-          cityService.getWeatherByGeo(geoLocation.lat, geoLocation.lon),
+        queryFn: async () => {
+          if (!geoLocation) return;
+
+          return cityService.getWeatherByGeo(geoLocation.lat, geoLocation.lon);
+        },
         enabled: !!geoLocation,
       },
     ],

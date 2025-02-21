@@ -29,7 +29,7 @@ export function WeatherAdditionalInfoWidget() {
           />
           <InfoCard
             title='Visibility'
-            value={`${Math.round(weatherCity?.visibility / 1000)}km`}
+            value={`${Math.round((weatherCity?.visibility as number) / 1000)}km`}
             icon={Eye}
           />
         </div>

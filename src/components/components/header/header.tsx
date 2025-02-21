@@ -12,11 +12,6 @@ export function Header() {
 
   const debounce = useDebounce(() => setIsSearch(true), 400);
 
-  const handleOnChange = (e) => {
-    setSearchTerm(e.target.value);
-    debounce();
-  };
-
   return (
     <header className='mt-6 grid grid-cols-[_1fr_3fr_0.6fr] lg:grid-cols-[_1fr_8fr_0.6fr] gap-3 lg:gap-6 w-full relative'>
       <Logo />
@@ -24,7 +19,10 @@ export function Header() {
       <div className='space-y-2 flex items-center py-4 px-10 bg-secondary rounded-full'>
         <Field
           value={searchTerm}
-          onChange={handleOnChange}
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+            debounce();
+          }}
           type='text'
           placeholder='Add city..'
         />
