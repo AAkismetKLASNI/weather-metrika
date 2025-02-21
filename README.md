@@ -19,7 +19,7 @@
 <img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/2.gif' alt='gif'/>
 
 ## Изменение типа отображаемых данных на графике
-<img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/2.gif' alt='gif'/>
+<img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/3.gif' alt='gif'/>
 
 ## Поверхностный адаптив
 <img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/1.jpg' width='200' alt='gif'/>
