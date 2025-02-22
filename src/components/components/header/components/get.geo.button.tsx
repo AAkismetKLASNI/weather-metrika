@@ -8,7 +8,7 @@ export function GetGeoButton() {
   return (
     <button
       onClick={getGeoCurrentGeo}
-      className='bg-secondary p-4 rounded-full flex justify-center items-center hover:opacity-70'
+      className='bg-secondary p-2 lg:p-4 rounded-full flex justify-center items-center hover:opacity-70'
     >
       <Icon
         color='var(--color-accent)'

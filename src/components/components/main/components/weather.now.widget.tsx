@@ -13,7 +13,7 @@ export function WeatherNowWidget() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className='p-6 bg-secondary rounded-2xl text-center grid gap-4'>
+        <div className='p-6 bg-secondary rounded-2xl text-center grid gap-6'>
           <h3>{weatherCity?.name}</h3>
           <div className='grid grid-cols-2 items-center justify-center'>
             <div className='justify-self-center space-y-2'>

@@ -7,7 +7,7 @@ export function Logo() {
   return (
     <button
       onClick={() => setGeoLocation(null)}
-      className='rounded-full bg-secondary p-4 flex justify-center items-center hover:opacity-70'
+      className='hidden md:flex rounded-full bg-secondary p-2 lg:p-4 justify-center items-center hover:opacity-70'
     >
       <img
         src='/logo.svg'

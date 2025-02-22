@@ -13,7 +13,7 @@ export function Main() {
   return (
     <>
       {geoLocation ? (
-        <main className='grid grid-cols-1 gap-8 lg:grid-cols-3 xl:grid-cols-4 grid-rows-2 lg:gap-16'>
+        <main className='grid gap-8 lg:grid-cols-3 xl:grid-cols-4 lg:grid-rows-2 lg:gap-16'>
           <WeatherNowWidget />
           <WeatherForecastWidget />
           <WeatherAdditionalInfoWidget />

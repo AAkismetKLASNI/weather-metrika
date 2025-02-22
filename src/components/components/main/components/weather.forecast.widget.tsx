@@ -12,11 +12,11 @@ export function WeatherForecastWidget() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className='p-8 bg-secondary rounded-2xl grid items-center grid-cols-5 col-span-1 lg:col-span-2'>
+        <div className='p-4 bg-secondary rounded-2xl grid col-span-1 gap-4 items-center grid-cols-3 lg:p-8 lg:grid-cols-5 lg:col-span-2'>
           {fiveDayForecast?.map((forecast) => (
             <div
               key={forecast.dt_txt}
-              className='justify-self-center text-center space-y-6'
+              className='justify-self-center text-center space-y-2 lg:space-y-6'
             >
               <h4>{DAYS[new Date(forecast.dt_txt).getDay()]}</h4>
               <Icon
