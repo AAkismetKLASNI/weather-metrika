@@ -22,7 +22,7 @@
 <img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/3.gif' alt='gif'/>
 
 ## Поверхностный адаптив
-<img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/1.jpg' width='200' alt='gif'/>
+<img src='https://github.com/AAkismetKLASNI/weather-metrika/blob/master/assets.readme/4.gif' width='200' alt='gif'/>
 
 ### Шаги по запуску:
 - git clone https://github.com/AAkismetKLASNI/weather-metrika.git
