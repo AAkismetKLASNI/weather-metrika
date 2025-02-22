@@ -21,7 +21,7 @@ export function Header() {
       <GetGeoButton />
 
       {!!cities?.length && (
-        <div className='flex gap-4 flex-wrap absolute top-[calc(100%+1rem)] md:row-start-2 md:col-start-2 '>
+        <div className='hidden lg:flex gap-4 flex-wrap absolute top-[calc(100%+1rem)] col-start-2'>
           {cities.map((city, index) => (
             <Badge
               onClick={() => getGeo(city.lat, city.lon)}
