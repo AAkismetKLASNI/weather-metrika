@@ -2,7 +2,7 @@ import { useAtomValue } from 'jotai';
 import { WeatherForecastWidget } from './components/weather.forecast.widget';
 import { WeatherNowWidget } from './components/weather.now.widget';
 import { WeatherAdditionalInfoWidget } from './components/weather.additional.info/weather.additional.info.widget.widget';
-import { ChartWidget } from './components/chart.widget';
+import { ChartWidget } from './components/chart-widget/chart.widget';
 import { geoLocationAtom } from '../../../store/geo.location';
 import { Icon } from '../../ui/icon';
 import { LocateOff } from 'lucide-react';

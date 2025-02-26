@@ -12,3 +12,8 @@ export interface IChartType {
   icon: LucideIcon;
   type: keyof Omit<IChartData, 'day'>;
 }
+
+export interface IChartView {
+  icon: LucideIcon;
+  view: 'line' | 'bar';
+}
