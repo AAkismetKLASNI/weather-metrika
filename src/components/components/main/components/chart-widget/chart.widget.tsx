@@ -1,4 +1,3 @@
-import { DAYS } from '../../../../../config/days.config';
 import { Icon } from '../../../../ui/icon';
 import { useState } from 'react';
 import type { IChartData } from '../../../../../types/chart.types';
@@ -36,12 +35,12 @@ export function ChartWidget() {
 
           {selectedView === 'bar' ? (
             <BarChartView
-              chartData={chartData}
+              fiveDayForecast={fiveDayForecast}
               selectedType={selectedType}
             />
           ) : (
             <LineChartView
-              chartData={chartData}
+              fiveDayForecast={fiveDayForecast}
               selectedType={selectedType}
             />
           )}

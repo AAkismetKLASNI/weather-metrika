@@ -1,12 +1,16 @@
 import { Bar, XAxis, Tooltip, BarChart, ResponsiveContainer } from 'recharts';
 import type { IChartData } from '../../../../../../types/chart.types';
+import { getChartData } from '../chart.config';
 
 interface Props {
-  chartData: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fiveDayForecast: any;
   selectedType: keyof Omit<IChartData, 'day'>;
 }
 
-export function BarChartView({ chartData, selectedType }: Props) {
+export function BarChartView({ fiveDayForecast, selectedType }: Props) {
+  const chartData = getChartData(fiveDayForecast) || [];
+
   return (
     <ResponsiveContainer
       width='100%'
@@ -19,7 +23,10 @@ export function BarChartView({ chartData, selectedType }: Props) {
           stroke='var(--color-primary)'
         />
         <XAxis dataKey='day' />
-        <Tooltip />
+        <Tooltip
+          labelClassName='text-accent'
+          itemStyle={{ color: '#000' }}
+        />
       </BarChart>
     </ResponsiveContainer>
   );
